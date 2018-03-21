@@ -44,6 +44,11 @@
     font-weight: bold;
 }
 
+.card{
+    box-shadow: none;
+    border-radius: 7px;
+}
+
 .link{
     background: white;
     box-shadow: 0 1px 3px rgba(0,0,0,.04);
@@ -66,5 +71,15 @@ $list : 20, 25, 50, 75;
 
     .font-#{$item}{
         font-size: 0px + $item !important;
+    }
+}
+
+$items: 1, 2, 3, 4, 5;
+
+@each $item in $items{
+    h#{$item}{
+        font-size: 26px - ($item * 2);
+        font-weight: 400;
+        margin: 8px 0;
     }
 }

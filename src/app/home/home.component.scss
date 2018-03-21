@@ -1,6 +1,6 @@
 .sidebar{
     height: 100%;
-    width: 55px;
+    width: 82px;
     position: fixed;
     overflow-x: hidden;
     // overflow-y: scroll;
@@ -24,7 +24,13 @@
     }
 }
 
+.content{
+    margin-left: 100px;
+    padding: 25px;
+    background: #EEEEEE;
+}
+
 .left-sidebar{
-    width: 250px;
+    width: 82px;
     display: flex;
 }
