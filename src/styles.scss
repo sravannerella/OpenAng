@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootswatch/dist/materia/_variables.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootswatch/dist/materia/_bootswatch.scss';
+
+
+.fill-height{
+    height: calc(100vh - 80px);
+}
+
+.pd-5{
+    padding: 5px;
+}
+
+.f-l{
+    float: left;
+}
+
+.f-r{
+    float: right;
+}
+
+.icon{
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 32px 0 0;
+    padding: 14px;
+    color: rgba(0,0,0,0.54);
+}
+
+.w400{
+    width: 400px;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.infoText{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.link{
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,.04);
+    transition: all .3s ease-in-out;
+    border: 1px solid #e2e2e2;
+
+    &:hover, &:focus{
+        text-decoration: none;
+        box-shadow:  0 2px 4px rgba(0,0,0,.08);
+    }
+}
+
+$list : 20, 25, 50, 75;
+
+@each $item in $list{
+    .img-#{$item}{
+        width: 0px + $item;
+        height: 0px + $item;
+    }
+
+    .font-#{$item}{
+        font-size: 0px + $item !important;
+    }
+}

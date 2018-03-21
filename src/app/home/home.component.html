@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar5 navbar-light bg-light">
+
+  <div class="left-sidebar">
+      <a href="/home"><img src="./assets/imgs/angular.png" class="img-50" alt="Angular"></a>
+  </div>
+
+  <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active mx-2">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class="sidebar">
+  <ul id="slide-out" class="side-nav">
+      <li>
+        <i class="mx-1 icon fa fa-tachometer font-20"></i>
+        <!-- <span>Dashboard</span> -->
+      </li>
+      
+      <li>
+        <i class="mx-1 icon fa fa-users font-20"></i>
+        <!-- <span>Employees</span> -->
+      </li>
+
+      <li>
+        <i class="mx-1 icon fa fa-calendar font-20"></i>
+        <!-- <span>Timesheets</span> -->
+      </li>
+
+      <li>
+        <i class="mx-1 icon fa fa-cog font-20"></i>
+        <!-- <span>Settings</span> -->
+      </li>
+
+      <li>
+        <i class="mx-1 icon fa fa-user font-20"></i>
+        <!-- <span>Account</span> -->
+      </li>
+      
+      <li>
+        <i class="mx-1 icon fa fa-question font-20"></i>
+        <!-- <span>Help</span> -->
+      </li>
+
+      <li>
+        <i class="mx-1 icon fa fa-sign-out font-20"></i>
+        <!-- <span>Log Out</span> -->
+      </li>
+  </ul>
+</div>
