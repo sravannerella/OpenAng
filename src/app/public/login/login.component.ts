@@ -22,6 +22,8 @@ export class LoginComponent implements OnInit {
     if (this.login.valid) {
       this.router.navigate(['home']);
       this.toaster.success('', 'Success!');
+      localStorage.setItem('email', this.login.value.email);
+      console.log(this.login.value.email);
     } else {
       this.toaster.error('Complete the required feilds and submit the form again.', 'Error!');
     }

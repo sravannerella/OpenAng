@@ -11,6 +11,8 @@ import { ToastrModule } from 'ngx-toastr';
 // Forms Module
 import { FormsModule } from '@angular/forms';
 
+import { AuthGuard } from './core/auth.guard';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
@@ -29,30 +31,23 @@ import { HomeComponent } from './home/home.component';
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: '/account/login',
-        pathMatch: 'full'
-      },
-      {
-        path: 'login',
-        redirectTo: '/account/login',
-        pathMatch: 'full'
-      },
-      {
-        path: 'signup',
-        redirectTo: '/account/signup',
+        redirectTo: '/login',
         pathMatch: 'full'
       },
       {
         path: 'home',
-        component: HomeComponent
+        component: HomeComponent,
+        canActivate: [AuthGuard]
       },
       {
-        path: 'account',
-        loadChildren: 'app/forms/forms.module#FormModule'
+        path: '',
+        loadChildren: 'app/public/forms.module#FormModule'
       }
     ])
   ],
-  providers: [],
+  providers: [
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
