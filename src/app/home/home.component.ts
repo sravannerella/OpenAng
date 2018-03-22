@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -9,15 +7,9 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router, private toastr: ToastrService) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  logout() {
-    localStorage.clear();
-    this.router.navigateByUrl('/');
-    this.toastr.success('', 'Log Out Successful');
   }
 
 }

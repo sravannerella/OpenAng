@@ -1,0 +1,30 @@
+.sidebar{
+    height: 100%;
+    width: 82px;
+    position: fixed;
+    overflow-x: hidden;
+    // overflow-y: scroll;
+    transition: 0.5s;
+
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li{
+            font-size: 14px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+
+            &:hover{
+                background: rgba(0,0,0,0.05);
+            }
+        }
+    }
+}
+
+.left-sidebar{
+    width: 82px;
+    display: flex;
+}

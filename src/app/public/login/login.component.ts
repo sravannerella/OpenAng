@@ -21,9 +21,11 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.login.valid) {
       this.router.navigate(['home']);
-      this.toaster.success('', 'Success!');
+      this.toaster.success('', 'Success!', {
+        timeOut: 2000,
+        tapToDismiss: true
+      });
       localStorage.setItem('email', this.login.value.email);
-      console.log(this.login.value.email);
     } else {
       this.toaster.error('Complete the required feilds and submit the form again.', 'Error!');
     }

@@ -13,7 +13,10 @@ export class AuthGuard implements CanActivate {
         if (localStorage.getItem('email') !== null) {
             return true;
         } else {
-            this.toastr.info('', 'Please Log in');
+            this.toastr.info('', 'Please Log in', {
+                timeOut: 2000,
+                tapToDismiss: true
+            });
             this.router.navigateByUrl('/login');
         }
     }
