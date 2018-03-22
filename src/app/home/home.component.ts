@@ -9,11 +9,9 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class HomeComponent implements OnInit {
 
-  isNavbarCollapsed: boolean;
   constructor(private router: Router, private toastr: ToastrService) { }
 
   ngOnInit() {
-    this.isNavbarCollapsed = true;
   }
 
   logout() {
